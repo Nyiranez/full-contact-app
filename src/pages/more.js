@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 export const More = (props) => {
   const [contact, setContact] = useState()
@@ -36,21 +38,21 @@ export const More = (props) => {
   }, [contactId]);
 
   return (
-    <div>
-      <div className='mt-8  flex flex-row justify-around'>
+    <div className='flex flex-col items-center'>
+      <div className='mt-8  flex flex-row justify-around items-center bg-cyan-700 px-16 py-16 w-9/12'>
         <div>
-          <h1 className='font-bold text-xl'>Marie Louise</h1>
-          <p>Full names: {contact ? contact.fullName : "Not available"}</p>
+          <h1 className='font-bold text-2xl'>About This Contact</h1>
+          <p className='mt-8'>Full names: {contact ? contact.fullName : "Not available"}</p>
           <p>E-mail: {contact ? contact.email : "Not available"}</p>
           <p>Phone: {contact ? contact.phone : "Not available"}</p>
-          <p>Created on : {contact ? contact.createdAt : "Not available"}</p>
           <p>Created on : {contact ? contact.updatedAt : "Not available"}</p>
         </div>
-        <div className='space-x-4 '>
+        <div className='sm:space-x-4  space-y-4 '>
           <button className='bg-black py-1 px-2 text-white'>Update</button>
           <button className='bg-red-600 py-1 px-2 text-white'  onClick={() => deleteContact(contact._id)}>Delete</button>
         </div>
       </div>
+      <button className='bg-green-800 text-white font-bold py-1 px-2 mt-8 mb-4' ><Link to="/">View Contact</Link></button>
     </div>
   )
 }

@@ -6,7 +6,7 @@ export const Header = () => {
             <div className='bg-slate-300 w-full h-24 flex flex-row justify-around items-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]'>
                 <h1 className='font-bold text-2xl'>Contact</h1>
                 <h1 className='font-bold'>Home</h1>
-                <div className='flex flex-row bg-slate-600 py-2 px-4 space-x-2 items-center rounded-lg' >
+                <div className='sm:flex sm:flex-row bg-slate-600 sm:py-2 sm:px-4 sm:space-x-2 sm:items-center sm:rounded-lg hidden' >
                     <CgProfile />
                     <div className='flex flex-col'>
                         <input type="text" className='bg-slate-600 text-white'></input>

@@ -13,7 +13,7 @@ import { More } from './pages/more';
 
 function App() {
   return (
-    <div>
+    <div className='px-4 flex flex-col '>
       <div className='container'>
       <Header />
       <BrowserRouter>
