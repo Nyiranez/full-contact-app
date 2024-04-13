@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 
-export const More = (props) => {
+export const More = () => {
   const [contact, setContact] = useState()
 
   let { contactId } = useParams();
@@ -32,14 +32,13 @@ export const More = (props) => {
     });
  };
 
-
   useEffect(() => {
     fetchContact(contactId);
   }, [contactId]);
 
   return (
     <div className='flex flex-col items-center'>
-      <div className='mt-8  flex flex-row justify-around items-center bg-cyan-700 px-16 py-16 w-9/12'>
+      <div className='mt-8  flex md:flex-row md:justify-around md:items-center bg-cyan-700 px-16 py-16 w-9/12 items-center justify-around '>
         <div>
           <h1 className='font-bold text-2xl'>About This Contact</h1>
           <p className='mt-8'>Full names: {contact ? contact.fullName : "Not available"}</p>
@@ -48,8 +47,8 @@ export const More = (props) => {
           <p>Created on : {contact ? contact.updatedAt : "Not available"}</p>
         </div>
         <div className='sm:space-x-4  space-y-4 '>
-          <button className='bg-black py-1 px-2 text-white'>Update</button>
-          <button className='bg-red-600 py-1 px-2 text-white'  onClick={() => deleteContact(contact._id)}>Delete</button>
+          <button className='bg-black py-1 px-2 text-white'><Link to={`/update/${contactId}`}>Update</Link></button>
+          <button className='bg-red-600 py-1 px-2 text-white'  onClick={() => deleteContact(contactId)}>Delete</button>
         </div>
       </div>
       <button className='bg-green-800 text-white font-bold py-1 px-2 mt-8 mb-4' ><Link to="/">View Contact</Link></button>

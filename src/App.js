@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Table } from './pages/table';
 import { Footer } from './comonents/footer';
 import { More } from './pages/more';
+import { Update } from './pages/update';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Table />}></Route>
           <Route path="/home" element={<Home />}></Route>
+          <Route path="/update/:contId" element={<Update />}></Route>
           <Route path="/details/:contactId" element={<More />}></Route>
          
         </Routes>
