@@ -1,11 +1,13 @@
 import React from 'react'
 import { CgProfile } from "react-icons/cg";
+
+
 export const Header = () => {
     return (
         <div>
             <div className='bg-slate-300 w-full h-24 flex flex-row justify-around items-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]'>
                 <h1 className='font-bold text-2xl'>Contact</h1>
-                <h1 className='font-bold'>Home</h1>
+                <button className='font-bold'>Home</button>
                 <div className='sm:flex sm:flex-row bg-slate-600 sm:py-2 sm:px-4 sm:space-x-2 sm:items-center sm:rounded-lg hidden' >
                     <CgProfile />
                     <div className='flex flex-col'>
