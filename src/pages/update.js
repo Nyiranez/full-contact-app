@@ -8,14 +8,14 @@ export const Update = () => {
     const [fullName, setFullName] = useState("")
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("")
-    const [picture, setPicture] = useState("")
+
 
     let { contId } = useParams();
     const navigate = useNavigate();
 
     const updateContact = (id) => {
         // e.preventDefault();
-        let updatedContact = { fullName, email, phone, picture }
+        let updatedContact = { fullName, email, phone }
 
         axios.put(`https://contact-app-server-nxgi.onrender.com/api/v1/contactapp/contact/update?id=${id}`, updatedContact)
             .then((resp) => {
