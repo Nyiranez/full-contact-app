@@ -10,6 +10,8 @@ import { Table } from './pages/table';
 import { Footer } from './comonents/footer';
 import { More } from './pages/more';
 import { Update } from './pages/update';
+import { Login } from './pages/login';
+import { SingUp } from './pages/signup';
 
 
 function App() {
@@ -19,7 +21,9 @@ function App() {
       <Header />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Table />}></Route>
+        <Route path="/" element={<Login />}></Route>
+        <Route path="/signup" element={<SingUp />}></Route>
+          <Route path="/Table" element={<Table />}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/update/:contId" element={<Update />}></Route>
           <Route path="/details/:contactId" element={<More />}></Route>

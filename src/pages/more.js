@@ -38,7 +38,7 @@ export const More = () => {
 
   return (
     <div className='flex flex-col items-center'>
-      <div className='mt-8  flex md:flex-row md:justify-around md:items-center bg-cyan-700 px-16 py-16 w-9/12 items-center justify-around '>
+      <div className='mt-8  flex md:flex-row md:justify-around md:items-center border-2 px-16 py-16 w-9/12 items-center justify-around '>
         <div>
           <h1 className='font-bold text-2xl'>About This Contact</h1>
           <p className='mt-8'>Full names: {contact ? contact.fullName : "Not available"}</p>
@@ -51,7 +51,7 @@ export const More = () => {
           <button className='bg-red-600 py-1 px-2 text-white'  onClick={() => deleteContact(contactId)}>Delete</button>
         </div>
       </div>
-      <button className='bg-green-800 text-white font-bold py-1 px-2 mt-8 mb-4' ><Link to="/">View Contact</Link></button>
+      <button className='bg-green-800 text-white font-bold py-1 px-2 mt-8 mb-4' ><Link to="/Table">View Contact</Link></button>
     </div>
   )
 }

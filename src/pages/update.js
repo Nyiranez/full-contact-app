@@ -13,7 +13,7 @@ export const Update = () => {
     let { contId } = useParams();
     const navigate = useNavigate();
 
-    const updateContact = (e, id) => {
+    const updateContact = (id) => {
         // e.preventDefault();
         let updatedContact = { fullName, email, phone, picture }
 
@@ -37,10 +37,7 @@ export const Update = () => {
                 setEmail(contact.email);
                 setPhone(contact.phone);
 
-                // if (contact.picture !== undefined) {
-                //     setPicture(contact.picture);
-                // }
-
+               
             })
             .catch((error) => {
                 console.log(error);
@@ -79,7 +76,7 @@ export const Update = () => {
 
 
                 <button type="button" className='w-96 h-12 border-2 mt-4 bg-black text-white'
-                    onClick={(e) => updateContact(e, contId)}>Save Changes</button>
+                    onClick={() => updateContact( contId)}>Save Changes</button>
             </form>
 
         </div>

@@ -12,7 +12,7 @@ export const Header = () => {
                         <input type="text" className='bg-slate-600 text-white'></input>
                         <input type="text" className='bg-slate-600 text-white' ></input>
                     </div>
-                    <button className='bg-black text-white font-bold px-4 py-2 rounded-lg shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)]'>Create Contact</button>
+                    <button className='bg-black text-white font-bold px-4 py-2 rounded-lg shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)]'>Signout</button>
                 </div>
             </div>
         </div>
