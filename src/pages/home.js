@@ -8,7 +8,7 @@ export const Home = () => {
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
-  const [picture, setPicture] = useState("")
+  // const [picture, setPicture] = useState("")
 
 
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ export const Home = () => {
   function addContact(e) {
     e.preventDefault();
 
-    let newContact = { fullName, email, phone, picture };
+    let newContact = { fullName, email, phone };
     axios.post('https://contact-app-server-nxgi.onrender.com/api/v1/contactapp/contact/add', newContact).then((res) => {
       console.log(res.data)
       navigate("/table");
