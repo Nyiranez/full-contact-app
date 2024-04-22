@@ -19,7 +19,7 @@ export const Home = () => {
     let newContact = { fullName, email, phone, picture };
     axios.post('https://contact-app-server-nxgi.onrender.com/api/v1/contactapp/contact/add', newContact).then((res) => {
       console.log(res.data)
-      navigate("/");
+      navigate("/table");
     }).catch((err) => {
       alert("create contact fail");
 
